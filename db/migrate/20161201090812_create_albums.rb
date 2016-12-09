@@ -6,7 +6,7 @@ class CreateAlbums < ActiveRecord::Migration[5.0]
       t.string :name
       t.integer :views
       t.float :avg_rates
-      t.string :album_type
+      t.integer :album_type
 
       t.timestamps
     end

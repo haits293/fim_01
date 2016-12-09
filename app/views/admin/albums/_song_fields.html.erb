@@ -1,0 +1,27 @@
+<fieldset>
+  <div class="form-group">
+    <%= f.label :name, t(".song_name") %><br/>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+  <%= f.hidden_field :singer_id, class: "singer_id" %>
+  <div class="form-group">
+    <%= f.label :composer_id %><br/>
+    <%= f.select :composer_id,
+      options_for_select(@support.composers),
+      class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :category_id %><br/>
+    <%= f.select :category_id,
+      options_for_select(@support.categories),
+      class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :quality %><br/>
+    <%= f.select :quality,
+      options_for_select(@support.qualities),
+      class: "form-control" %>
+  </div>
+  <%= f.hidden_field :_destroy %>
+  <%= link_to t(".remove"), "#", class: "remove_fields" %>
+</fieldset>

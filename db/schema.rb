@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20161202033534) do
     t.string   "name"
     t.integer  "views"
     t.float    "avg_rates"
-    t.string   "album_type"
+    t.integer  "album_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -109,8 +109,6 @@ ActiveRecord::Schema.define(version: 20161202033534) do
     t.string   "name"
     t.integer  "quality"
     t.integer  "singer_id"
-    t.integer  "album_id"
-    t.string   "album_type"
     t.integer  "composer_id"
     t.integer  "category_id"
     t.integer  "views"

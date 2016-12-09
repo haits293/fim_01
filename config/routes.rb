@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :users, only: [:index, :destroy]
     resources :artists, except: :show
     resources :categories, except: :show
+    resources :albums, except: :show
   end
 
   resources :users, only: :show

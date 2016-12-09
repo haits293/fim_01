@@ -12,8 +12,6 @@ class User < ApplicationRecord
   has_many :following, through: :active_relationships, source: :followed
   has_many :followers, through: :passive_relationships, source: :follower
 
-  accepts_nested_attributes_for :albums
-
   devise :database_authenticatable, :registerable, :rememberable, :validatable,
     :omniauthable, omniauth_providers: [:facebook, :google_oauth2]
 

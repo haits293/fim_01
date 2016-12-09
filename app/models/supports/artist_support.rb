@@ -1,4 +1,4 @@
-class Supports::Artist
+class Supports::ArtistSupport
   attr_reader :artist
 
   def initialize artist
