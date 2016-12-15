@@ -120,12 +120,12 @@ footer {
   margin-bottom: 50px;
 }
 .omb_login .omb_socialButtons a {
-  color: white; 
+  color: white;
   opacity:0.9;
 }
 .omb_login .omb_socialButtons a:hover {
   color: white;
-  opacity:1;      
+  opacity:1;
 }
 .omb_login .omb_socialButtons .omb_btn-facebook {background: #3b5998;}
 .omb_login .omb_socialButtons .omb_btn-twitter {background: #00aced;}
@@ -154,7 +154,7 @@ footer {
   background-color: white;
   width: 3em;
   text-align: center;
-}     
+}
 
 .omb_login .omb_loginForm .input-group.i {
   width: 2em;
@@ -170,4 +170,42 @@ footer {
 .search_form .search_field {
   margin-left: 20px;
   width: 300px;
+}
+
+.stats {
+  overflow: auto;
+  margin-top: 0;
+  padding: 0;
+  a {
+    float: left;
+    padding: 0 10px;
+    border-left: 1px solid $gray-lighter;
+    color: gray;
+    &:first-child {
+      padding-left: 0;
+      border: 0;
+    }
+    &:hover {
+      text-decoration: none;
+      color: blue;
+    }
+  }
+  strong {
+    display: block;
+  }
+}
+
+.user_avatars {
+  overflow: auto;
+  margin-top: 10px;
+  .gravatar {
+    margin: 1px 1px;
+  }
+  a {
+    padding: 0;
+  }
+}
+
+.users.follow {
+  padding: 0;
 }
