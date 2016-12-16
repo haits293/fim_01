@@ -37,6 +37,7 @@ en:
           rock: "Rock"
           another: "Another"
           balad: "Balad"
+    at_least_one_song: "An album must have at least one song"
   layouts:
     header:
       logo: "Framgia IMusic"
@@ -100,6 +101,16 @@ en:
       search_form:
         search: "Search :"
         placeholder: "Search name..."
+    albums:
+      new:
+        heading: "Add New Album"
+        submit: "Submit"
+        create_new: "Create new one"
+        song_name: "Song's name"
+        album_name: "Album's name"
+        add_fields: "Add Fields"
+      song_fields:
+        remove: "[remove]"
     categories:
       search_form:
         search: "Search :"

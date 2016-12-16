@@ -4,8 +4,6 @@ class CreateSongs < ActiveRecord::Migration[5.0]
       t.string :name
       t.integer :quality
       t.integer :singer_id
-      t.integer :album_id
-      t.string :album_type
       t.integer :composer_id
       t.integer :category_id
       t.integer :views

@@ -54,6 +54,6 @@ class Admin::ArtistsController < ApplicationController
   end
 
   def artist_support
-    @support = Supports::Artist.new @artist
+    @support = Supports::ArtistSupport.new @artist
   end
 end

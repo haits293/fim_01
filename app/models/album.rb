@@ -1,11 +1,28 @@
 class Album < ApplicationRecord
-  has_many :album_songs, dependent: :destroy
-  has_many :songs, through: :album_songs
+  has_many :album_songs, dependent: :destroy, inverse_of: :album
   has_many :ratings, as: :ratable, dependent: :destroy
   has_many :comments, as: :commentable, dependent: :destroy
+  has_many :songs, through: :album_songs
 
   belongs_to :category
   belongs_to :user
 
-  accepts_nested_attributes_for :songs
+  accepts_nested_attributes_for :songs, allow_destroy: true,
+    reject_if: :all_blank
+
+  enum album_type: [:album, :favorite]
+
+  validates :name, presence: true, length: {maximum: 255}
+  validates :album_type, presence: true
+
+  validate :at_least_one_song
+
+  private
+  def at_least_one_song
+    if self.album?
+      if self.songs.size < 1
+        errors.add :base, I18n.t("activerecord.at_least_one_song")
+      end
+    end
+  end
 end

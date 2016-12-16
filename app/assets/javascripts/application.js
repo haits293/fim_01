@@ -15,3 +15,9 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap-datepicker
+
+$(document).ready(function(){
+  $('#new_album').on("submit", function(){
+    $(".singer_id").val($('#album_artist_id').val());
+  });
+});
