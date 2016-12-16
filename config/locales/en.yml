@@ -55,6 +55,9 @@ en:
     error_messages:
       content: "The form contains "
       error: "error"
+    search_form:
+      search: "Search :"
+      placeholder: "Search name..."
   static_pages:
     home:
       title: "Home"
@@ -109,6 +112,26 @@ en:
         song_name: "Song's name"
         album_name: "Album's name"
         add_fields: "Add Fields"
+      edit:
+        heading: "Add New Album"
+        submit: "Submit"
+        create_new: "Create new one"
+        song_name: "Song's name"
+        album_name: "Album's name"
+        add_fields: "Add Fields"
+      index:
+        heading: "All Album"
+        submit: "Submit"
+        created_by: "Created by"
+        name: "Name"
+        artist_id: "Singer"
+        views: "Views"
+        avg_of_rates: "Rate"
+        action: "Action"
+        delete_action: "Delete"
+        edit_action: "Edit"
+        confirm: "Confirm"
+        number_of_songs: "Number of Songs"
       song_fields:
         remove: "[remove]"
     categories:

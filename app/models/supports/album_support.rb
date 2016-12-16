@@ -24,4 +24,8 @@ class Supports::AlbumSupport
   def qualities
     @qualities ||= Song.qualities.keys
   end
+
+  def who_perform id
+    Artist.find_by(id: id).name
+  end
 end
