@@ -11,7 +11,11 @@ Rails.application.routes.draw do
     resources :albums, except: :show
   end
 
-  resources :users, only: :show
+  resources :users, only: :show do
+    member do
+      resources :albums, only: [:new, :create]
+    end
+  end
   resources :relationships, only: [:index, :create, :destroy]
   resources :songs, only: :show
 end

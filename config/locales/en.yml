@@ -201,3 +201,8 @@ en:
       unfollow: "Unfollow"
     follow:
       follow: "Follow"
+  albums:
+    new:
+      heading: "New Favorite List"
+      album_name: "Playlist's name"
+      submit: "Create New Favorite"
