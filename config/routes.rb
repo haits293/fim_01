@@ -13,4 +13,5 @@ Rails.application.routes.draw do
 
   resources :users, only: :show
   resources :relationships, only: [:index, :create, :destroy]
+  resources :songs, only: :show
 end

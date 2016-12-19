@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require mediaelement_rails
 //= require_tree .
 //= require bootstrap-datepicker
 
