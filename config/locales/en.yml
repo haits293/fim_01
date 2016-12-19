@@ -38,6 +38,7 @@ en:
           another: "Another"
           balad: "Balad"
     at_least_one_song: "An album must have at least one song"
+    invalid_type: "File must be of filetype .mp3"
   layouts:
     header:
       logo: "Framgia IMusic"

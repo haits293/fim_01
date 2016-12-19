@@ -18,7 +18,7 @@ class Admin::AlbumsController < ApplicationController
       redirect_to root_url
     else
       album_support
-      flash[:danger] = t "flash.create_failed"
+      flash[:danger] = @album.errors.full_messages.join("/ ")
       redirect_to :back
     end
   end
@@ -32,7 +32,7 @@ class Admin::AlbumsController < ApplicationController
       redirect_to root_url
     else
       album_support
-      flash[:danger] = t "flash.update_failed"
+      flash[:danger] = @album.errors.full_messages.join("/ ")
       redirect_to :back
     end
   end
@@ -49,8 +49,8 @@ class Admin::AlbumsController < ApplicationController
   private
   def album_params
     params.require(:album).permit :name, :artist_id, :album_type, :user_id,
-      songs_attributes: [:id, :name, :quality, :singer_id, :composer_id,
-      :category_id, :_destroy]
+      songs_attributes: [:id, :quality, :singer_id, :composer_id,
+      :category_id, :_destroy, :audio]
   end
 
   def album_support

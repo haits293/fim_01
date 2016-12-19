@@ -10,11 +10,19 @@ class Song < ApplicationRecord
   enum quality: ["128kbps", "320kbps"]
 
   validates :quality, presence: true
-  validates :name, presence: true
+  validates :audio_file_name, presence: true
+  validates :audio_content_type, presence: true
+  validates :audio_file_size, presence: true
 
   validate :composer_must_exist
   validate :singer_must_exist
   validate :category_must_exist
+
+  has_attached_file :audio
+  validates_attachment_content_type :audio,
+    content_type: %w[audio/mpeg3 audio/mpeg, audio/ogg],
+    message: I18n.t("activerecord.invalid_type")
+  validates_attachment_size :audio, less_than: 20.megabytes
 
   private
   def composer_must_exist
