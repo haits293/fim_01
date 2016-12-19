@@ -1,0 +1,33 @@
+<h1><%= t ".heading" %></h1>
+<%= render "shared/search_form", object: @search,
+  object_path: admin_albums_path %>
+<table class="table table-hover">
+  <tr>
+    <th><%= t ".created_by" %></th>
+    <th><%= t ".name" %></th>
+    <th><%= t ".artist_id" %></th>
+    <th><%= t ".views" %></th>
+    <th><%= t ".avg_of_rates" %></th>
+    <th><%= t ".number_of_songs" %></th>
+    <th><%= t ".action" %></th>
+  </tr>
+  <% @albums.each do |album| %>
+    <tr>
+      <td><%= album.user.name %></td>
+      <td><%= album.name %></td>
+      <td><%= @support.who_perform album.artist_id %></td>
+      <td><%= album.views %></td>
+      <td><%= album.avg_rates %></td>
+      <td><%= album.songs.size %></td>
+      <td>
+        <%= link_to t(".edit_action"), edit_admin_album_path(album.id),
+          class: "label label-success" %>
+        <%= link_to t(".delete_action"), admin_album_path(album.id),
+          method: :delete, class: "label label-danger",
+          data: {confirm: t(".confirm")} %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+
+<%= will_paginate @artists %>

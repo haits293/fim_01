@@ -4,3 +4,5 @@ artists:
   order_per_page: 20
 categories:
   per_page: 10
+albums:
+  order_per_page: 20

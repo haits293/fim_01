@@ -15,12 +15,16 @@ class Album < ApplicationRecord
   validates :name, presence: true, length: {maximum: 255}
   validates :album_type, presence: true
 
-  validate :at_least_one_song
+  validate :at_least_one_song, on: [:create, :update]
 
   private
   def at_least_one_song
     if self.album?
-      if self.songs.size < 1
+      i = 0
+      self.songs.each do |song|
+        i += 1 unless song.marked_for_destruction?
+      end
+      if i < 1
         errors.add :base, I18n.t("activerecord.at_least_one_song")
       end
     end

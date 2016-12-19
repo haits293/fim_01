@@ -1,0 +1,7 @@
+<%= search_form_for object, url: object_path do |f| %>
+  <div class="form-group search_form">
+    <%= f.label :name_cont, t(".search") %>
+    <%= f.search_field :name_cont, placeholder: t(".placeholder"),
+      class: "search_field" %>
+  </div>
+<% end %>
