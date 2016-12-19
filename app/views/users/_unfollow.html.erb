@@ -1,0 +1,6 @@
+<div id="unfollow">
+  <%= form_for @followed, html: {method: :delete, remote: true},
+    class: "unfollow-form" do |f| %>
+    <%= f.submit t(".unfollow"), class: "btn" %>
+  <% end %>
+</div>

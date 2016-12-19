@@ -58,6 +58,9 @@ en:
     search_form:
       search: "Search :"
       placeholder: "Search name..."
+    stats:
+      following: "following"
+      followers: "followers"
   static_pages:
     home:
       title: "Home"
@@ -173,6 +176,7 @@ en:
     update_success: "Updated successfully"
     update_failed: "Update failed"
     not_found: "This artist does not exist"
+    user_not_found: "This user does not exist"
 
   controllers:
     admin:
@@ -192,3 +196,7 @@ en:
       edit-profile: "Edit Profile"
       change-password: "Change Password"
       activity: "Activity"
+    unfollow:
+      unfollow: "Unfollow"
+    follow:
+      follow: "Follow"

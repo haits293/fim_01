@@ -30,7 +30,21 @@ end
     gender: 1,
     artist_type: 1)
 end
+
 10.times do |c|
   name = Faker::Name.name
   Category.create! name: name
+end
+
+99.times do |n|
+  name  = Faker::Name.name
+  email = "example-#{n+1}@railstutorial.org"
+  password = "password"
+  date_of_birth = "1970-01-01"
+  User.create!(name: name,
+    email: email,
+    password: password,
+    password_confirmation: password,
+    date_of_birth: date_of_birth,
+    is_admin: false)
 end
