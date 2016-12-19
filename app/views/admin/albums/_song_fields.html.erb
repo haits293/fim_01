@@ -1,7 +1,7 @@
 <fieldset>
   <div class="form-group">
-    <%= f.label :name, t(".song_name") %><br/>
-    <%= f.text_field :name, class: "form-control" %>
+    <%= f.label :audio, t(".song_name") %><br/>
+    <%= f.file_field :audio, class: "form-control" %>
   </div>
   <%= f.hidden_field :singer_id, class: "singer_id" %>
   <div class="form-group">

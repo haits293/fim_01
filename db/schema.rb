@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161202033534) do
+ActiveRecord::Schema.define(version: 20161219014733) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id"
@@ -106,7 +106,6 @@ ActiveRecord::Schema.define(version: 20161202033534) do
   end
 
   create_table "songs", force: :cascade do |t|
-    t.string   "name"
     t.integer  "quality"
     t.integer  "singer_id"
     t.integer  "composer_id"
@@ -114,8 +113,12 @@ ActiveRecord::Schema.define(version: 20161202033534) do
     t.integer  "views"
     t.float    "avg_rates"
     t.boolean  "pinned"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "audio_file_name"
+    t.string   "audio_content_type"
+    t.integer  "audio_file_size"
+    t.datetime "audio_updated_at"
   end
 
   create_table "users", force: :cascade do |t|

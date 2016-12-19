@@ -1,7 +1,8 @@
 <div class="row omb_login">
   <h3 class="omb_authTitle"><%= t ".heading" %></h3>
   <div class="col-md-6 col-md-offset-3">
-    <%= form_for [:admin, @album], html: {name: "album-form"} do |f| %>
+    <%= form_for [:admin, @album], remote: true,
+      html: {multipart: true, name: "album-form"} do |f| %>
       <%= render "shared/error_messages", object: f.object %>
       <div class="form-group">
         <%= f.label :name, t(".album_name") %><br/>
