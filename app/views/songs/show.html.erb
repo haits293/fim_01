@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-md-4">
+    <h3><%= @song.audio_file_name %></h3>
+    <span class="glyphicon glyphicon-leaf"></span>
+    <%= @song.audio_file_size %><br/>
+  </div>
+  <div class="col-md-8">
+    <div class="audio-player">
+      <img class="cover" src="img/cover.png" alt="">
+      <audio id="audio-player" src="<%= @song.audio.url %>"
+        type="audio/mp3" controls="controls"></audio>
+    </div>
+  </div>
+</div>
