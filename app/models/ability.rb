@@ -8,5 +8,6 @@ class Ability
     else
       can :manage, Album
     end
+    can :manage, Comment
   end
 end

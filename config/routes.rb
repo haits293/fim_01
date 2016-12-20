@@ -17,5 +17,8 @@ Rails.application.routes.draw do
     end
   end
   resources :relationships, only: [:index, :create, :destroy]
-  resources :songs, only: :show
+  resources :songs, only: :show do
+    resources :comments, except: :new
+    get "/comments/new/(:parent_id)", to: "comments#new", as: :new_comment
+  end
 end

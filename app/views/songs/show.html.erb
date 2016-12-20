@@ -12,3 +12,10 @@
     </div>
   </div>
 </div>
+<%= render "comments/form" %>
+
+<ul>
+  <% if @comments %>
+    <%= comments_tree_for @comments %>
+  <% end %>
+</ul>
