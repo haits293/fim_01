@@ -1,0 +1,15 @@
+<li>
+  <small>
+    <%= t ".submitted", time: time_ago_in_words(comment.created_at) %>
+  </small>
+
+  <blockquote>
+    <p><%= comment.content %></p>
+  </blockquote>
+  <% if comment.root? %>
+    <p>
+      <%= link_to t(".reply"), song_new_comment_path(song_id: @commentable.id,
+        parent_id: comment.id) %>
+    </p>
+  <% end %>
+</li>

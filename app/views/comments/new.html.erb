@@ -1,0 +1,6 @@
+<h3><%= t ".new_comment" %></h3>
+<% if @comment.parent && @comment.parent.depth %>
+  <%= render "comment", comment: @comment.parent %>
+<% end %>
+
+<%= render "comments/form" %>
