@@ -21,4 +21,5 @@ Rails.application.routes.draw do
     resources :comments, except: :new
     get "/comments/new/(:parent_id)", to: "comments#new", as: :new_comment
   end
+  resources :albums, only: :show
 end
