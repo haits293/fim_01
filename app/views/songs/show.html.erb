@@ -12,6 +12,16 @@
     </div>
   </div>
 </div>
+<div class="row">
+  <div class="small-2 large-4 columns">
+    <% if current_user %>
+      <%= rating_for @song, "evaluation",
+        disable_after_rate: true, imdb_avg: true, target: "#hintDiv",
+        targetText: "Rate This!" %>
+      <div id="hintDiv"></div>
+    <% end %>
+  </div>
+</div>
 <%= render "comments/form" %>
 
 <ul>

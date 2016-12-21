@@ -25,4 +25,6 @@ Rails.application.routes.draw do
     resources :comments
     get "/comments/new/(:parent_id)", to: "comments#new", as: :new_comment
   end
+
+  post "/rate" => "rater#create", as: "rate"
 end
