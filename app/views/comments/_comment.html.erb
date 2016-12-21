@@ -8,7 +8,7 @@
   </blockquote>
   <% if comment.root? %>
     <p>
-      <%= link_to t(".reply"), song_new_comment_path(song_id: @commentable.id,
+      <%= link_to t(".reply"), new_polymorphic_path([@commentable, comment],
         parent_id: comment.id) %>
     </p>
   <% end %>
