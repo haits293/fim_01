@@ -28,4 +28,10 @@ class Supports::AlbumSupport
   def who_perform id
     Artist.find_by(id: id).name
   end
+
+  def comments
+    @comments = @album.comments.map do |comment|
+      comment.hash_tree(limit_depth: 2)
+    end.reduce(:merge)
+  end
 end
