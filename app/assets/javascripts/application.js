@@ -21,4 +21,13 @@ $(document).ready(function(){
   $('form[name=album-form]').on("submit", function(){
     $(".singer_id").val($('#album_artist_id').val());
   });
+
+  var player = new MediaElementPlayer('#audio-player');
+
+  $('.song-link').on("click", function(){
+    player.setSrc($(this).attr('source'));
+    player.load();
+    player.play();
+    return false;
+  });
 });
