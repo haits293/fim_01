@@ -206,3 +206,12 @@ en:
       heading: "New Favorite List"
       album_name: "Playlist's name"
       submit: "Create New Favorite"
+  comments:
+    form:
+      comment: "Comment"
+      comment_placeholder: "Add a comment"
+    comment:
+      reply: "reply"
+      submitted: "Submitted %{time} ago"
+    new:
+      new_comment: "New Comment"
