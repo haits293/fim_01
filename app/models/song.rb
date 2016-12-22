@@ -1,6 +1,7 @@
 class Song < ApplicationRecord
   has_many :lyrics, dependent: :destroy
-  has_many :ratings, as: :ratable, dependent: :destroy
+  has_many :ratings, as: :rateable, class_name: Rate.name,
+    dependent: :destroy
   has_many :comments, as: :commentable, dependent: :destroy
   has_many :artist_songs
   has_many :artists, through: :artist_songs
@@ -23,6 +24,8 @@ class Song < ApplicationRecord
     content_type: %w[audio/mpeg3 audio/mpeg, audio/ogg],
     message: I18n.t("activerecord.invalid_type")
   validates_attachment_size :audio, less_than: 20.megabytes
+
+  ratyrate_rateable "evaluation"
 
   private
   def composer_must_exist

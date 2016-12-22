@@ -25,8 +25,6 @@ class User < ApplicationRecord
 
   scope :all_customer, -> {where is_admin: false}
 
-  ratyrate_rateable "evaluation"
-
   def current_user? user
     self == user
   end

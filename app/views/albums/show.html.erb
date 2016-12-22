@@ -20,11 +20,23 @@
       </div>
     </div>
   </div>
-  <%= render "comments/form" %>
-
-  <ul>
-    <% if @support.comments %>
-      <%= comments_tree_for @support.comments %>
-    <% end %>
-  </ul>
 </div>
+
+<div class="row">
+  <div class="small-2 large-4 columns">
+    <% if user_signed_in? %>
+      <%= rating_for @album, "evaluation",
+        disable_after_rate: true, imdb_avg: true, target: "#hintDiv",
+        targetText: t(".rate_this"), space: true, cancel_place: "right" %>
+      <div id="hintDiv"></div>
+    <% end %>
+  </div>
+</div>
+
+<%= render "comments/form" %>
+
+<ul>
+  <% if @support.comments %>
+    <%= comments_tree_for @support.comments %>
+  <% end %>
+</ul>
