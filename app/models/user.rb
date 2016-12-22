@@ -24,6 +24,13 @@ class User < ApplicationRecord
     :password, :password_confirmation]
 
   scope :all_customer, -> {where is_admin: false}
+  scope :recipient_name, -> (activity) do
+    if activity.recipient.respond_to? :name
+      activity.recipient.name
+    else
+      activity.recipient.audio_file_name
+    end
+  end
 
   def current_user? user
     self == user

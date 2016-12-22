@@ -23,13 +23,19 @@
       <span class="glyphicon glyphicon-wrench"></span>
       <%= link_to t(".change-password"), "#" %>
     </div>
+    <%= link_to t(".new_playlist"), new_album_path(@user) %>
   </div>
   <div class="col-md-8">
     <div class="panel panel-primary">
-      <div class="panel-heading"><%= t ".activity" %></div>
+      <div class="panel-heading"><%= t ".activity" %>
+      </div>
       <div class="content">
+        <% if current_user.current_user?(@user) %>
+          <%= render @activities %>
+        <% else %>
+          <%= t ".nothing_to_show" %>
+        <% end %>
       </div>
     </div>
   </div>
-  <%= link_to t(".submit"), new_album_path(@user) %>
 </div>

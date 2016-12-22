@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :configure_permitted_parameters, if: :devise_controller?
+  include PublicActivity::StoreController
 
   private
   def configure_permitted_parameters
@@ -11,7 +12,7 @@ class ApplicationController < ActionController::Base
     flash[:warning] = exception.message
     redirect_to root_path
   end
-  
+
   rescue_from ActiveRecord::RecordNotFound do
     flash[:danger] = t "controllers.application.flash_error"
     redirect_to admin_users_path

@@ -216,6 +216,8 @@ en:
       edit-profile: "Edit Profile"
       change-password: "Change Password"
       activity: "Activity"
+      nothing_to_show: "Nothing to show yet."
+      new_playlist: "New Playlist"
     unfollow:
       unfollow: "Unfollow"
     follow:
@@ -241,3 +243,11 @@ en:
     show:
       rate_this: "Rate This!"
       views: "views:"
+  public_activity:
+    activities:
+      activity:
+        rate_action: "rated on"
+        comment_action: "commented on"
+        follow_action: "followed"
+        unfollow_action: "unfollowed"
+        you: "You"

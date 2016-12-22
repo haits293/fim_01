@@ -1,0 +1,9 @@
+<div class="activity">
+  <% if activity.owner && current_user.current_user?(activity.owner) %>
+    <%= t ".you" %>
+  <% else %>
+    <%= link_to activity.owner.name, activity.owner if activity.owner %>
+  <% end %>
+  <%= t ".#{@support.track activity}_action" %>
+  <%= link_to User.recipient_name(activity), activity.recipient %>
+</div>
