@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  post "/rate": "rater#create", as: "rate"
+  post "/rate", to: "rater#create", as: "rate"
   devise_for :users, controllers: {omniauth_callbacks: :"callbacks#create"}
   root "static_pages#show", page: "home"
 

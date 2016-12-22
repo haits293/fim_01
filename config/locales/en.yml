@@ -206,6 +206,8 @@ en:
       heading: "New Favorite List"
       album_name: "Playlist's name"
       submit: "Create New Favorite"
+    show:
+      rate_this: "Rate This!"
   comments:
     form:
       comment: "Comment"
@@ -215,3 +217,6 @@ en:
       submitted: "Submitted %{time} ago"
     new:
       new_comment: "New Comment"
+  songs:
+    show:
+      rate_this: "Rate This!"
