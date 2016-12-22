@@ -15,4 +15,6 @@
  *= require bootstrap-datepicker
  *= require mediaelement_rails
  *= require mediaelement_rails/mejs-skins
+ *= require admin-lte/dist/css/AdminLTE
+ *= require admin-lte/dist/css/skins/_all-skins
  */

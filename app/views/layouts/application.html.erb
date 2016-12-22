@@ -4,14 +4,22 @@
     <title><%= full_title yield :title %></title>
     <%= render "layouts/rails_default" %>
   </head>
-  <body>
-    <%= render "layouts/header" %>
-    <div class="container layouts">
-      <% flash.each do |message_type, message| %>
-        <%= content_tag :div, message, class: "alert alert-#{message_type}" %>
+  <body class="hold-transition skin-green sidebar-mini">
+    <div class="wrapper">
+      <% if user_signed_in? && current_user.is_admin? %>
+        <%= render "layouts/admin/header" %>
+        <%= render "layouts/admin/sidebar" %>
+        <div class="content-wrapper">
+          <% flash.each do |message_type, message| %>
+            <%= content_tag :div, message, class: "alert alert-#{message_type}" %>
+          <% end %>
+          <%= yield %>
+        </div>
+      <% else %>
+        <%= render "layouts/header" %>
+        <%= yield %>
+        <%= render "layouts/footer" %>
       <% end %>
-      <%= yield %>
-      <%= render "layouts/footer" %>
     </div>
   </body>
 </html>
