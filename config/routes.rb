@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     resources :artists, except: :show
     resources :categories, except: :show
     resources :albums, except: :show
+    resources :dashboard, only: :index
   end
 
   resources :users, only: :show do

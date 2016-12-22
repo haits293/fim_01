@@ -51,6 +51,19 @@ en:
       name: "Framgia IMusic"
       link_about: "About"
       link_contact: "Contact"
+    admin:
+      header:
+        link_profile: "Profile"
+        link_logout: "Logout"
+        user_image: "User Image"
+        logo: "IMusik"
+      sidebar:
+        link_albums: "Albums"
+        link_users: "Users"
+        link_categories: "Categories"
+        link_artists: "Artists"
+        link_dashboard: "Dashboard"
+        online: "Online"
   base_title: "Framgia IMusic"
   shared:
     error_messages:
@@ -76,6 +89,12 @@ en:
       title: "About"
       content: "About page"
   admin:
+    dashboard:
+      index:
+        yesterday_registration: "Yesterday Registration"
+        today_registration: "Today Registration"
+        total_albums: "Total Albums/Playlists"
+        new_playlists: "New Playlists"
     users:
       index:
         title: "Manage users"
