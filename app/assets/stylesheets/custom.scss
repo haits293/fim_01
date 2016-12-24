@@ -1,8 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-$gray-medium-light: #eaeaea;
-
 @mixin box_sizing {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -18,199 +16,38 @@ section {
   overflow: auto;
 }
 
-textarea {
-  resize: vertical;
-}
-
-.center {
-  text-align: center;
-  h1 {
-    margin-bottom: 10px;
+.mejs-horizontal-volume-slider {
+  margin-left: 25px!important;
+  .mejs-horizontal-volume-current {
+    left: 350px!important;
+    width: 0.9em;
+  }
+  .mejs-horizontal-volume-total {
+    left: 350px!important;
+    width: 0.9em;
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1;
+/* change the color of the background */
+.mejs-controls,
+.mejs-mediaelement,
+.mejs-container {
+  background: url('') !important;
+  background-color: #45B39D !important;
+  padding-left: 5px!important;
+  border-radius: 5px!important;
 }
 
-h1 {
-  font-size: 3em;
-  letter-spacing: -2px;
-  margin-bottom: 30px;
-  text-align: center;
+/* change the color of the lettering */
+.mejs-currenttime,
+.mejs-duration {
+  color: black !important;
 }
 
-h2 {
-  font-size: 1.2em;
-  letter-spacing: -1px;
-  margin-bottom: 30px;
-  text-align: center;
-  font-weight: normal;
-  color: $gray-light;
+.mejs-controls .mejs-button button:focus {
+  outline: none !important;
 }
 
-p {
-  font-size: 1.1em;
-  line-height: 1.7em;
+.header-section {
+  height: 66px!important;
 }
-
-.layouts {
-  width: 100%;
-}
-
-/* header */
-
-#logo {
-  float: left;
-  margin-right: 10px;
-  font-size: 1.7em;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  padding-top: 9px;
-  font-weight: bold;
-}
-
-#logo:hover {
-  color: #fff;
-  text-decoration: none;
-}
-
-/* footer */
-
-footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid $gray-medium-light;
-  color: $gray-light;
-  a {
-    color: $gray;
-    &:hover {
-      color: $gray-darker;
-    }
-  }
-  small {
-    float: left;
-  }
-  ul {
-    float: right;
-    list-style: none;
-    li {
-      float: left;
-      margin-left: 15px;
-    }
-  }
-}
-
-/* login */
-
-@media (min-width: 768px) {
-  .omb_row-sm-offset-3 div:first-child[class*="col-"] {
-    margin-left: 25%;
-  }
-}
-
-.omb_login .omb_authTitle {
-  text-align: center;
-  line-height: 300%;
-  font-weight: bold;
-  font-size: 35px;
-}
-
-.omb_socialButtons {
-  margin-bottom: 50px;
-}
-.omb_login .omb_socialButtons a {
-  color: white;
-  opacity:0.9;
-}
-.omb_login .omb_socialButtons a:hover {
-  color: white;
-  opacity:1;
-}
-.omb_login .omb_socialButtons .omb_btn-facebook {background: #3b5998;}
-.omb_login .omb_socialButtons .omb_btn-twitter {background: #00aced;}
-.omb_login .omb_socialButtons .omb_btn-google {background: #c32f10;}
-.omb_login .omb_loginOr {
-  position: relative;
-  font-size: 1.5em;
-  color: #aaa;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-}
-.omb_login .omb_loginOr .omb_hrOr {
-  background-color: #cdcdcd;
-  height: 1px;
-  margin-top: 0px !important;
-  margin-bottom: 0px !important;
-}
-.omb_login .omb_loginOr .omb_spanOr {
-  display: block;
-  position: absolute;
-  left: 50%;
-  top: -0.6em;
-  margin-left: -1.5em;
-  background-color: white;
-  width: 3em;
-  text-align: center;
-}
-
-.omb_login .omb_loginForm .input-group.i {
-  width: 2em;
-}
-.omb_login .omb_loginForm  .help-block {
-  color: red;
-}
-
-.omb_login .field {
-  padding-bottom: 15px;
-}
-
-.search_form .search_field {
-  margin-left: 20px;
-  width: 300px;
-}
-
-.stats {
-  overflow: auto;
-  margin-top: 0;
-  padding: 0;
-  a {
-    float: left;
-    padding: 0 10px;
-    border-left: 1px solid $gray-lighter;
-    color: gray;
-    &:first-child {
-      padding-left: 0;
-      border: 0;
-    }
-    &:hover {
-      text-decoration: none;
-      color: blue;
-    }
-  }
-  strong {
-    display: block;
-  }
-}
-
-.user_avatars {
-  overflow: auto;
-  margin-top: 10px;
-  .gravatar {
-    margin: 1px 1px;
-  }
-  a {
-    padding: 0;
-  }
-}
-
-.users.follow {
-  padding: 0;
-}
-
-.replies {margin-left: 50px;}
-
-.replies .replies {margin-left: 0;}

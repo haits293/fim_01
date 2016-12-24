@@ -12,9 +12,16 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require mosaic/js/jquery.nicescroll
+//= require mosaic/js/jquery.flexisel
+//= require mosaic/js/jquery.jplayer.min
+//= require mosaic/js/jplayer.playlist.min
 //= require turbolinks
-//= require mediaelement_rails
 //= require bootstrap.min
+//= require mosaic/js/mediaelement-and-player.min
+//= require mosaic/js/scripts
+//= require mosaic/js/classie
+//= require mosaic/js/uisearch
 //= require_tree .
 //= require bootstrap-datepicker
 
@@ -24,6 +31,7 @@ $(document).ready(function(){
   });
 
   var player = new MediaElementPlayer('#audio-player');
+  new UISearch($('#sb-search'));
 
   $('.song-link').on("click", function(){
     player.setSrc($(this).attr('source'));
@@ -32,3 +40,9 @@ $(document).ready(function(){
     return false;
   });
 });
+
+addEventListener("load", function() {
+  setTimeout(hideURLbar, 0);
+}, false);
+
+function hideURLbar(){window.scrollTo(0,1);}
