@@ -33,7 +33,7 @@
   </div>
 </div>
 
-<%= render "comments/form" %>
+<%= render "comments/form" if user_signed_in? %>
 
 <ul>
   <% if @support.comments %>

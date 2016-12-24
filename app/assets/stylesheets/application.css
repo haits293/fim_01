@@ -17,4 +17,8 @@
  *= require mediaelement_rails/mejs-skins
  *= require admin-lte/dist/css/AdminLTE
  *= require admin-lte/dist/css/skins/_all-skins
+ *= require mosaic/css/font-awesome
+ *= require mosaic/css/icon-font
+ *= require mosaic/css/jplayer.blue.monday.min
+ *= require mosaic/css/style
  */
