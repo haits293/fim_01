@@ -27,6 +27,8 @@ class Song < ApplicationRecord
 
   ratyrate_rateable "evaluation"
 
+  is_impressionable counter_cache: true, column_name: :views
+
   private
   def composer_must_exist
     composer = Artist.find_by id: self.composer_id

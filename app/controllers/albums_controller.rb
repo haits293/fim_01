@@ -1,11 +1,12 @@
 class AlbumsController < ApplicationController
   load_and_authorize_resource only: [:new, :create, :show]
   before_action :set_attributes, only: :create
-  before_action :album_support, only: [:show]
+  before_action :album_support, only: :show
 
   def show
     @commentable = @album
     @comment = Comment.new
+    impressionist @album
   end
 
   def new

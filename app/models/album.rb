@@ -20,6 +20,8 @@ class Album < ApplicationRecord
 
   ratyrate_rateable "evaluation"
 
+  is_impressionable counter_cache: true, column_name: :views
+
   private
   def at_least_one_song
     if self.album?

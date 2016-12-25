@@ -5,7 +5,7 @@ class CreateSongs < ActiveRecord::Migration[5.0]
       t.integer :singer_id
       t.integer :composer_id
       t.integer :category_id
-      t.integer :views
+      t.integer :views, default: 0
       t.float :avg_rates
       t.boolean :pinned
 

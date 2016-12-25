@@ -5,6 +5,7 @@ class SongsController < ApplicationController
   def show
     @commentable = @song
     @comment = Comment.new
+    impressionist @song
   end
 
   def song_support
