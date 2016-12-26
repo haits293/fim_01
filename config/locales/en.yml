@@ -227,6 +227,7 @@ en:
       submit: "Create New Favorite"
     show:
       rate_this: "Rate This!"
+      views: "views:"
   comments:
     form:
       comment: "Comment"
@@ -239,3 +240,4 @@ en:
   songs:
     show:
       rate_this: "Rate This!"
+      views: "views:"
