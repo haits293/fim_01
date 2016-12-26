@@ -4,9 +4,9 @@
     <title><%= full_title yield :title %></title>
     <%= render "layouts/rails_default" %>
   </head>
-  <body class="hold-transition skin-green sidebar-mini">
-    <div class="wrapper">
-      <% if user_signed_in? && current_user.is_admin? %>
+  <% if user_signed_in? && current_user.is_admin? %>
+    <body class="hold-transition skin-green sidebar-mini">
+      <div class="wrapper">
         <%= render "layouts/admin/header" %>
         <%= render "layouts/admin/sidebar" %>
         <div class="content-wrapper">
@@ -15,11 +15,19 @@
           <% end %>
           <%= yield %>
         </div>
-      <% else %>
-        <%= render "layouts/header" %>
-        <%= yield %>
-        <%= render "layouts/footer" %>
-      <% end %>
-    </div>
-  </body>
+      </div>
+    </body>
+  <% else %>
+    <body class="sticky-header left-side-collapsed"  onload="initMap()">
+      <section>
+        <div class="left-side sticky-left-side">
+          <%= render "layouts/left-sidebar" %>
+        </div>
+        <div class="main-content">
+          <%= render "layouts/header" %>
+          <%= yield %>
+        </div>
+      </section>
+    </body>
+  <% end %>
 </html>

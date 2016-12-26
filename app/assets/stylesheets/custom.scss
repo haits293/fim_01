@@ -214,3 +214,39 @@ footer {
 .replies {margin-left: 50px;}
 
 .replies .replies {margin-left: 0;}
+
+.mejs-horizontal-volume-slider {
+  margin-left: 25px!important;
+  .mejs-horizontal-volume-current {
+    left: 350px!important;
+    width: 0.9em;
+  }
+  .mejs-horizontal-volume-total {
+    left: 350px!important;
+    width: 0.9em;
+  }
+}
+
+/* change the color of the background */
+.mejs-controls,
+.mejs-mediaelement,
+.mejs-container {
+  background: url('') !important;
+  background-color: #45B39D !important;
+  padding-left: 5px!important;
+  border-radius: 5px!important;
+}
+
+/* change the color of the lettering */
+.mejs-currenttime,
+.mejs-duration {
+  color: black !important;
+}
+
+.mejs-controls .mejs-button button:focus {
+  outline: none !important;
+}
+
+.header-section {
+  height: 66px!important;
+}
