@@ -12,18 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require mosaic/js/jquery.nicescroll
-//= require mosaic/js/jquery.flexisel
-//= require mosaic/js/jquery.jplayer.min
-//= require mosaic/js/jplayer.playlist.min
 //= require turbolinks
 //= require bootstrap.min
-//= require mosaic/js/mediaelement-and-player.min
-//= require mosaic/js/scripts
-//= require mosaic/js/classie
-//= require mosaic/js/uisearch
-//= require_tree .
 //= require bootstrap-datepicker
+//= require_directory .
 
 $(document).ready(function(){
   $('form[name=album-form]').on("submit", function(){
